@@ -13,6 +13,9 @@ group :production do
 	gem 'rails_12factor'
 end
 
+# Use Bootstrap-Sass for general stylings
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
