@@ -15,3 +15,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// Timeout for hide flash messages
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#flash').remove();
+  }, 10000);
+});
