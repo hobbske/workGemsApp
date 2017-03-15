@@ -16,7 +16,7 @@
 			</ul>
 		</div>
 		<div class="brand-footer-plan">
-			<%= link_to "Sign up for FREE", new_user_registration_path, class: 'btn btn-brand btn-lg btn-block' %>
+			<%= link_to "Sign up for FREE", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-brand btn-lg btn-block' %>
 		</div>
 	</div>
 
@@ -32,7 +32,7 @@
 			</ul>
 		</div>
 		<div class="brand-footer-plan">
-			<%= link_to "Sign up for $10 per month", new_user_registration_path, class: 'btn btn-brand btn-lg btn-block' %>
+			<%= link_to "Sign up for $10 per month", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-brand btn-lg btn-block' %>
 		</div>
 	</div>
 </div>
