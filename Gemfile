@@ -37,8 +37,13 @@ gem 'jquery-rails'
 # Use Devise for user authentication
 gem 'devise', '~> 3.4.1'
 
+# Use Stripe for handling user payments
+gem 'stripe', '~> 1.16.1'
+
+gem 'figaro', '~> 1.0.0'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
