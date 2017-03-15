@@ -2,3 +2,37 @@
 	<h1>Welcome to Work<i class="fa fa-diamond" aria-hidden="true"></i>Gems</h1>
 	<h3>The easiest way to showcase the gems of your work.</h3>
 </div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="brand-header-plan">
+			<h3><strong>Starter Plan</strong></h3>
+			<h5>Sign up for free and get 5 categories.</h5>
+		</div>
+		<div class="brand-body-plan">
+			<ul>
+				<li>Create up to <strong>5</strong> categories</li>
+				<li>Add up to <strong>10</strong> gems per category</li>
+			</ul>
+		</div>
+		<div class="brand-footer-plan">
+			<%= link_to "Sign up for FREE", new_user_registration_path, class: 'btn btn-brand btn-lg btn-block' %>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="brand-header-plan">
+			<h3><strong>Pro Plan</strong></h3>
+			<h5>Sign up for $10 per month and get unlimited categories.</h5>
+		</div>
+		<div class="brand-body-plan">
+			<ul>
+				<li>Create <strong>unlimited</strong> categories</li>
+				<li>Add up to <strong>10</strong> gems per category</li>
+			</ul>
+		</div>
+		<div class="brand-footer-plan">
+			<%= link_to "Sign up for $10 per month", new_user_registration_path, class: 'btn btn-brand btn-lg btn-block' %>
+		</div>
+	</div>
+</div>
