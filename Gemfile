@@ -40,6 +40,7 @@ gem 'devise', '~> 3.4.1'
 # Use Stripe for handling user payments
 gem 'stripe', '~> 1.16.1'
 
+# Use Figaro to hide secret keys.
 gem 'figaro', '~> 1.0.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
