@@ -1,1 +1,52 @@
-<h1>New User Profile Form</h1>
+<div class="row">
+  
+  <div class="col-md-10 col-md-offset-1">
+
+
+
+    <div class="brand-header">
+      <h2>Work<i class="fa fa-diamond" aria-hidden:"true"></i>Gems</h2>
+      <h2><strong>Create Your Profile</strong></h2>
+      <p>Fill out your profile information so you can show and share your information with prospects and clients.</p>
+    </div>
+
+    <div class="jumbotron brand-body">
+
+			<%= form_for @profile, url: user_profile_path do |f| %>
+        <div class="form-group">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, autofocus: true, placeholder: 'John',  class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, autofocus: true, placeholder: 'Doe', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :company_name %>
+          <%= f.text_field :company_name, autofocus: true, placeholder: 'ABC Construction, Inc.', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :job_title %>
+          <%= f.select :job_title, ['General Contractor', 'Owner/President','Project Manager'], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :phone_number %>
+          <%= f.text_field :phone_number, autofocus: true, placeholder: '(888) 555-1212', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :contact_email %>
+          <%= f.text_field :contact_email, autofocus: true, placeholder: 'john.doe@abcconstruction.com', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %>
+          <%= f.text_area :description, autofocus: true, placeholder: 'Add a brief description of what you do.' , class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Update Profile", class: 'btn btn-brand' %>
+        </div>
+      <% end %>
+
+    </div>
+
+  </div>
+</div>
