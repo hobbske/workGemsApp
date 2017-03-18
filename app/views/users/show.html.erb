@@ -1,1 +1,46 @@
-<%= @user %>
+<div class="row"> 
+  <div class="col-md-10 col-md-offset-1">
+
+    <div class="brand-header">
+      <h2><strong>Work<i class="fa fa-diamond" aria-hidden:"true"></i>Gems</strong></h2>
+      <h2>Profile</h2>
+    </div>
+
+    <div class="row business-card">
+  		<div class="col-md-4 text-center business-card-image">
+
+				<%= image_tag("kevin.png", size: "250x400", alt: "User Profile Image") %>
+
+			</div>
+			<div class="col-md-8 text-center">
+				<div>
+					<%= image_tag("homebuilders_default.png", size: "150x100", alt: "User Profile Image") %>
+				</div>
+				<div>
+					<h1><strong><%= @user.profile.company_name %></strong></h1>
+				</div>				
+				<div>
+					<h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+				</div>
+				<hr class="brand">
+				<div>
+					<h2><strong>Phone: </strong><%= @user.profile.phone_number %></h2>
+				</div>
+				<div>
+					<h2><strong>Email: </strong><%= @user.profile.contact_email %></h2>
+				</div>
+				<hr class="brand">
+				<div>
+					<h3> <i>https://www.companywebsitelinkwillgohere.com</i> </h3>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="text-center">
+			<%= link_to 'Send', '#', class: 'btn btn-lg btn-brand' %>
+		</div>
+
+	</div>
+</div>
