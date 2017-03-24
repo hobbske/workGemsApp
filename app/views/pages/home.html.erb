@@ -1,40 +1,86 @@
-<%= link_to 'Create your profile!', new_user_profile_path(current_user) if current_user %>
 
-<div class="jumbotron brand-header text-center">
-	<h1>Welcome to Work<i class="fa fa-diamond" aria-hidden="true"></i>Gems</h1>
+<div class="brand-jumbotron text-center">
+	<h1 class="display-3">Welcome to Work<i class="fa fa-diamond" aria-hidden="true"></i>Gems</h1>
 	<h3>The easiest way to showcase the gems of your work.</h3>
 </div>
 
 <div class="row">
-	<div class="col-md-6">
-		<div class="brand-header-plan">
-			<h3><strong>Starter Plan</strong></h3>
-			<h5>Sign up for free and get 5 categories.</h5>
-		</div>
-		<div class="brand-body-plan">
-			<ul>
-				<li>Create up to <strong>5</strong> categories</li>
-				<li>Add up to <strong>10</strong> gems per category</li>
-			</ul>
-		</div>
-		<div class="brand-footer-plan">
-			<%= link_to "Sign up for FREE", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-brand btn-lg btn-block' %>
-		</div>
-	</div>
+	<% if user_signed_in? %>
+		<div class="col-md-6 text-center">
+      <% if current_user.profile %>
 
-	<div class="col-md-6">
-		<div class="brand-header-plan">
-			<h3><strong>Pro Plan</strong></h3>
-			<h5>Sign up for $10 per month and get unlimited categories.</h5>
+        <h2 class="text-center">  
+          <%= link_to user_path(current_user), class: 'btn brand-btn-home btn-block' do %>
+            <h3><i class="fa fa-address-book-o"></i> Profile</h3>
+          <% end %>
+        </h2>
+
+      <% else %>
+
+        <h2 class="text-center">  
+          <%= link_to new_user_profile_path(current_user), class: 'btn brand-btn-home btn-block' do %>
+            <h3><i class="fa fa-user"></i> Create Profile</h3>
+          <% end %>
+        </h2>
+
+      <% end %>
+
+    </div>
+    <div class="col-md-6 text-center">
+        <h2 class="text-center">  
+          <%= link_to new_user_profile_path(current_user), class: 'btn brand-btn-home btn-block' do %>
+            <h3><i class="fa fa-th"></i> Showcase</h3>
+          <% end %>
+        </h2>
+    </div>
+    <div class="col-md-6 text-center">
+        <h2 class="text-center">  
+          <%= link_to new_user_profile_path(current_user), class: 'btn brand-btn-home btn-block' do %>
+            <h3><i class="fa fa-camera"></i> Upload Gems</h3>
+          <% end %>
+        </h2>
+    </div>
+    <div class="col-md-6 text-center">
+        <h2 class="text-center">  
+          <%= link_to new_user_profile_path(current_user), class: 'btn brand-btn-home btn-block' do %>
+            <h3><i class="fa fa-commenting"></i> Feedback</h3>
+          <% end %>
+        </h2>
+    </div>
+    
+
+
+	<% else %>
+		<div class="col-md-6">
+			<div class="brand-header-plan">
+				<h3><strong>Starter Plan</strong></h3>
+				<h5>Sign up for free and get 5 categories.</h5>
+			</div>
+			<div class="brand-body-plan">
+				<ul>
+					<li>Create up to <strong>5</strong> categories</li>
+					<li>Add up to <strong>10</strong> gems per category</li>
+				</ul>
+			</div>
+			<div class="brand-footer-plan">
+				<%= link_to "Sign up for FREE", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-brand btn-lg btn-block' %>
+			</div>
 		</div>
-		<div class="brand-body-plan">
-			<ul>
-				<li>Create <strong>unlimited</strong> categories</li>
-				<li>Add up to <strong>10</strong> gems per category</li>
-			</ul>
+
+		<div class="col-md-6">
+			<div class="brand-header-plan">
+				<h3><strong>Pro Plan</strong></h3>
+				<h5>Sign up for $10 per month and get unlimited categories.</h5>
+			</div>
+			<div class="brand-body-plan">
+				<ul>
+					<li>Create <strong>unlimited</strong> categories</li>
+					<li>Add up to <strong>10</strong> gems per category</li>
+				</ul>
+			</div>
+			<div class="brand-footer-plan">
+				<%= link_to "Sign up for $10 per month", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-brand btn-lg btn-block' %>
+			</div>
 		</div>
-		<div class="brand-footer-plan">
-			<%= link_to "Sign up for $10 per month", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-brand btn-lg btn-block' %>
-		</div>
-	</div>
+	<% end %>
 </div>
