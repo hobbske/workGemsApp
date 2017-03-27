@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :samples
   devise_for :users, controllers: { registrations: 'users/registrations' }
 
   resources :users do
     resource :profile
+    resources :samples
   end
 
   resources :contacts
