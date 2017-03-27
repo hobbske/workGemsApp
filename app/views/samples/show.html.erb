@@ -1,27 +1,57 @@
-<p>
-  <strong>Category:</strong>
-  <%= @sample.category %>
-</p>
+<div class="container-fluid">
+  <div class="row">
 
-<p>
-  <strong>Title:</strong>
-  <%= @sample.title %>
-</p>
+    <div class="col-md-12 text-center">
+      <div class="row text-center">
 
-<p>
-  <strong>Before:</strong>
-  <%= image_tag @sample.img_before.url(:medium) %>
-</p>
+      <div class="col-md-6">
+          <div class="row text-center brand-header">
+            <h4>Before</h4>
+          </div>
+          <div class="row text-center brand-body">
+            <%= image_tag @sample.img_before.url(:large), class: 'brand-body-show img-responsive img-rounded' %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row text-center brand-header">
+            <h4>After</h4>
+          </div>
+          <div class="row text-center brand-body">
+            <h2>After Image Placeholder</h2>
+          </div>
+        </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @sample.description %>
-</p>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="row text-center">
+                <%= link_to samples_path, class: 'brand-btn-home btn-block' do %>
+                  <h4><i class="fa fa-paper-plane"></i> Send</h4>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="row text-center">
+                <%= link_to samples_path, class: 'brand-btn-home btn-block' do %>
+                  <h4><i class="fa fa-hand-o-left"></i> Back</h4>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="row text-center">
+                <%= link_to edit_sample_path, class: 'brand-btn-home btn-block' do %>
+                  <h4><i class="fa fa-pencil"></i> Edit</h4>
+                <% end %>
+              </div>
+            </div>
+            
+          </div>
+        </div>
 
-<p>
-  <strong>Marquee:</strong>
-  <%= @sample.marquee %>
-</p>
+        
+       
 
-<%= link_to 'Edit', edit_sample_path(@sample) %> |
-<%= link_to 'Back', samples_path %>
+      </div>
+    </div>
+  </div>
+</div>
