@@ -1,10 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>User:</strong>
-  <%= @sample.user_id %>
-</p>
-
 <p>
   <strong>Category:</strong>
   <%= @sample.category %>
@@ -13,6 +6,11 @@
 <p>
   <strong>Title:</strong>
   <%= @sample.title %>
+</p>
+
+<p>
+  <strong>Before:</strong>
+  <%= image_tag @sample.img_before.url(:medium) %>
 </p>
 
 <p>

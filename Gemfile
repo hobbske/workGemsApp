@@ -43,6 +43,9 @@ gem 'stripe', '~> 1.16.1'
 # Use Figaro to hide secret keys.
 gem 'figaro', '~> 1.0.0'
 
+# Use Paperclip to upload image files
+gem 'paperclip', '~> 5.1'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
