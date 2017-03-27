@@ -31,7 +31,11 @@
       <ul class="nav navbar-nav">
         <li class="<%= active_class(about_path) %>"><%= link_to "About", about_path %></li>
         <% if user_signed_in? %>
-          <li class="<%= active_class(user_path(current_user)) %>"><%= link_to "Profile", user_path(current_user) %></li>
+          <% if current_user.profile %>
+            <li class="<%= active_class(user_path(current_user)) %>"><%= link_to "Profile", user_path(current_user) %></li>
+          <% else %>
+            <li class="<%= active_class(new_user_profile_path(current_user)) %>"><%= link_to "Create Profile", new_user_profile_path(current_user) %></li>
+          <% end %>
           <li class="<%= active_class(user_samples_path(current_user)) %>"><%= link_to "Showcase", user_samples_path(current_user) %></li>
           <li class="<%= active_class(new_user_sample_path(current_user)) %>"><%= link_to "Upload Gem", new_user_sample_path(current_user) %></li>
         <% end %>
