@@ -69,6 +69,6 @@ class SamplesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sample_params
-      params.require(:sample).permit(:user_id, :category, :title, :img_before, :description, :marquee)
+      params.require(:sample).permit(:user_id, :category, :title, :img_before, :img_after, :description, :marquee)
     end
 end

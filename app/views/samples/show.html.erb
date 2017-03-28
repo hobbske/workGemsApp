@@ -17,12 +17,22 @@
             <h4>After</h4>
           </div>
           <div class="row text-center brand-body">
-            <h2>After Image Placeholder</h2>
+            <%= image_tag @sample.img_after.url(:large), class: 'brand-body-show img-responsive img-rounded' %>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="row brand-body">
+            <h5><strong>Category: </strong> <%= @sample.category %></h5>
+            <h5><strong>Title: </strong> <%= @sample.title %></h5>
+            <h5><strong>Description: </strong> <%= @sample.description %></h5>
+
           </div>
         </div>
 
         <div class="col-md-12">
           <div class="row">
+
             <div class="col-md-4">
               <div class="row text-center">
                 <%= link_to samples_path, class: 'brand-btn-home btn-block' do %>
@@ -30,13 +40,7 @@
                 <% end %>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="row text-center">
-                <%= link_to samples_path, class: 'brand-btn-home btn-block' do %>
-                  <h4><i class="fa fa-hand-o-left"></i> Back</h4>
-                <% end %>
-              </div>
-            </div>
+            
             <div class="col-md-4">
               <div class="row text-center">
                 <%= link_to edit_sample_path, class: 'brand-btn-home btn-block' do %>
@@ -45,11 +49,16 @@
               </div>
             </div>
             
+            <div class="col-md-4">
+              <div class="row text-center">
+                <%= link_to samples_path, class: 'brand-btn-home btn-block' do %>
+                  <h4><i class="fa fa-hand-o-left"></i> Back</h4>
+                <% end %>
+              </div>
+            </div> 
+
           </div>
         </div>
-
-        
-       
 
       </div>
     </div>
