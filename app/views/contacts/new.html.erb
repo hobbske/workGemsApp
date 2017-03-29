@@ -2,8 +2,8 @@
 	<div class="col-md-8 col-md-offset-2">
 
 		<div class="brand-header">
-			<h2>Work<i class="fa fa-diamond" aria-hidden:"true"></i>Gems</h2>
-			<h2><strong>Feedback</strong></h2>
+			<h2><strong>Work<i class="fa fa-diamond" aria-hidden:"true"></i>Gems</strong></h2>
+			<h2>Feedback</h2>
 			<h4>How can we improve your experience?</h4>
 		</div>
 		
@@ -23,10 +23,14 @@
 					<%= f.label :comments %>
 					<%= f.text_area :comments, class: 'form-control' %>
 				</div>
+				<div class="form-group">
+					<i> * required field </i>
+				</div>
 
 				<%= f.submit "Submit", class: 'btn btn-brand'%>
 
 			<% end %>
+
 		</div>
 		
 	</div>
