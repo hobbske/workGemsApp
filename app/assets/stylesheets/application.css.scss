@@ -413,6 +413,14 @@ ul {
     border-top-color: #C43f04;
 }
 
+table > thead > tr > th {
+  text-align: center;
+}
+
+td, th {
+    padding: 2%;
+}
+
 
 /*MEDIA QUERIES*/
 

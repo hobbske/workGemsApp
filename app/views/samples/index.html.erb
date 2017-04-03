@@ -10,13 +10,13 @@
 
     <div class="brand-body"> 
 
-      <table>
+      <table class="container table-lined table-hover">
         <thead>
           <tr>
-            <th>Category</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Marquee</th>
+            <th><h4><strong>Category</strong></h4></th>
+            <th><h4><strong>Title</strong></h4></th>
+            <th><h4><strong>Description</strong></h4></th>
+            <th><h4><strong>Marquee</strong></h4></th>
             <th colspan="3"></th>
           </tr>
         </thead>
@@ -24,20 +24,34 @@
         <tbody>
           <% @samples.each do |sample| %>
             <tr>
-              <td><%= sample.category %></td>
+              <td class="text-center"><%= sample.category %></td>
               <td><%= sample.title %></td>
               <td><%= sample.description %></td>
-              <td><%= sample.marquee %></td>
-              <td><%= link_to 'Show', sample %></td>
-              <td><%= link_to 'Edit', edit_sample_path(sample) %></td>
-              <td><%= link_to 'Destroy', sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td class="text-center"><%= sample.marquee %></td>
+              <td>         
+                <%= link_to sample do %>
+                  <i class="fa fa-diamond">
+                <% end %>
+              </td>
+              <td>
+                <%= link_to edit_sample_path(sample) do %>
+                 <i class="fa fa-pencil">
+                <% end %>
+              </td>
+              <td>
+                <%= link_to sample, method: :delete, data: { confirm: 'Are you sure you want to delete?' }  do %>
+                  <i class="fa fa-trash-o">  
+                <% end %>  
+              </td>
             </tr>
           <% end %>
         </tbody>
       </table>
-
-      <%= link_to 'New Gem', new_sample_path %>
-
+      <br>
+      <div class="text-center">
+        <%= link_to 'New Gem', new_sample_path, class: 'btn btn-brand' %>
+      </div>
+      <br>
     </div>
   </div>
 </div>
